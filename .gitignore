@@ -23,3 +23,12 @@ test_score.csv
 test_score.xlsx
 13/test_score.csv
 13/test_score.xlsx
+config.ini
+order_xxxxxx.csv
+得意先台帳.CSV
+20220802113416check_登録済.csv
+20220802113416check_未登録.csv
+20220802113416check_要確認.csv
+.gitignore
+raw_data.csv
+得意先台帳2.CSV
