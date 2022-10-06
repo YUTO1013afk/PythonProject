@@ -14,9 +14,9 @@ X3 = df_temp[df_temp.date == '2022-09-28']['hour']
 Y3 = df_temp[df_temp.date == '2022-09-28']['temperature']
 
 plt.figure(figsize=(16, 5))
-plt.plot(X1,Y1, label="9/26")
-plt.plot(X2,Y2, label="9/27")
-plt.plot(X3,Y3, label="9/28")
+plt.plot(X1, Y1, label="9/26")
+plt.plot(X2, Y2, label="9/27")
+plt.plot(X3, Y3, label="9/28")
 
 # グラフのタイトル
 plt.title("Temperature in my living")
