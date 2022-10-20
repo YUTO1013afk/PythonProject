@@ -16,7 +16,7 @@ train_X, test_X, train_y, test_y = \
     train_test_split(X, y, random_state=42)
 # train_test_split(X, y, test_size=0.25, random_state=42)
 
-# SVCで学習
+# 決定木で学習
 model = DecisionTreeClassifier()
 model.fit(train_X, train_y)  # 学習用データでモデルを訓練・適合(fit)
 model.predict(test_X)        # 評価用データに対するモデルの予測(predict)結果
