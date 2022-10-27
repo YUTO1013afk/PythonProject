@@ -32,3 +32,5 @@ order_xxxxxx.csv
 .gitignore
 raw_data.csv
 得意先台帳2.CSV
+agaricus-lepiota.data
+agaricus-lepiota.names
