@@ -1,6 +1,7 @@
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.model_selection import train_test_split
 import pandas as pd
+# header=Noneは、一行目を見出しにしないようにする 
 mush_data = pd.read_csv('agaricus-lepiota.data', header=None)
 # make_columns.pyの結果を利⽤する
 mush_data.columns = ['classes', 'cap-shape', 'cap-surface', 'cap-color',
@@ -17,16 +18,21 @@ mush_data.columns = ['classes', 'cap-shape', 'cap-surface', 'cap-color',
 # どう変化したか？ BとCで⽐較
 # print(mush_data[['gill-size', 'gill-attachment', 'odor', 'cap-color']]) # (B)
 # exit()
+# get_dummies()メソッドは、ダミーのカラムを持つDataFrameを作成
 mush_data_dummy = pd.get_dummies(
 mush_data[['gill-size', 'gill-attachment', 'odor', 'cap-color']])
 # print(mush_data_dummy) # (C)
 # exit()
+# 指定された関数を適用した後の結果のリストを返す
+# 名前のない関数を作るための式
 mush_data_dummy['flg'] = mush_data['classes'].map(
 lambda x: 1 if x == 'p' else 0)
 # mush_data_dummy はどうなったか？ CとDで⽐較
 # print(mush_data_dummy) # (D)
 # exit()
 # この2⾏は何を⾏なっているのか？
+# 説明変数と目的変数を指定する
+# .drop()は、表の行・列を削除する
 X = mush_data_dummy.drop("flg", axis=1)
 Y = mush_data_dummy["flg"]
 train_X, test_X, train_y, test_y = train_test_split(X, Y, random_state=42)
