@@ -8,7 +8,7 @@ df = sns.load_dataset('iris')
 for iris in df['species']:
     list.append(iris)
 
-# リストから欲しい値をカウントする
+# リストから欲しい値のカウントをする
 for key in species:
     val = list.count(key)
     print(f'{key} :{val}')
