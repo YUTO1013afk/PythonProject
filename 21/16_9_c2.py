@@ -11,6 +11,7 @@ train_X, test_X, train_y, test_y = train_test_split(X, y, random_state=42)
 # パラメータCを幾つか試す
 c_list = [10 ** i for i in range(-5, 5)]
 
+# グラフ描画用の空リスト
 train_accuracy = []
 test_accuracy = []
 
