@@ -12,4 +12,5 @@ viz = dtreeviz(regr,
                target_name='price',
                feature_names=boston.feature_names)
               
-viz.view()              
+viz.save('Usage.svg')
+# viz.view()              
