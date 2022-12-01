@@ -10,6 +10,7 @@ data.data, data.target, random_state=42)
 
 # ⾮線形 SVM（パラメタはすべて既定値）で学習‧検証する
 # clf は クラス分類器(classifier)を指す 慣⽤的な略語
+# gamma 訓練データの位置を中心とした分布の広がり度合いを決めること
 clf = SVC()
 clf.fit(train_X, train_y)
 
@@ -19,8 +20,10 @@ print(clf.score(test_X, test_y))
 # パラメタの候補値をリストで与える
 models = SVC()
 params = {
+# linear：線形　poly：多項式　rbf：放射基底関数　sigmoid：シグモイドカーネル
 "kernel": ["linear", "poly", "rbf", "sigmoid"],
 "C": [10 ** i for i in range(-5, 5)],
+# SVCにおけるmulti_classパラメーターのようなもの
 "decision_function_shape": ["ovr", "ovo"],
 "random_state": [0, 10, 20, 30, 40]
 }
