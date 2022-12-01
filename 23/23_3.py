@@ -1,5 +1,5 @@
 import time
-from sklearn.model_selection import GridSearchCV
+from sklearn.model_selection import GridSearchCV, RandomizedSearchCV
 from sklearn.svm import SVC
 from sklearn.datasets import load_digits
 from sklearn.model_selection import train_test_split
@@ -25,13 +25,14 @@ params = {
 "C": [10 ** i for i in range(-5, 5)],
 # SVCにおけるmulti_classパラメーターのようなもの
 "decision_function_shape": ["ovr", "ovo"],
-"random_state": [0, 10, 20, 30, 40], 
+"random_state": [0, 10, 20, 30, 40],
+'gamma' : [0.001, 0.01, 0.1, 1, 10, 100]
 }
 
 # グリッドサーチ（総当たり）で最適パラメタを探す
 print("グリッドサーチ開始")
 start_time = time.perf_counter()
-clf = GridSearchCV(models, params, n_jobs = -1)
+clf = RandomizedSearchCV(models, params, n_jobs = -1, n_iter=30)
 clf.fit(train_X, train_y)
 
 print("グリッドサーチ終了")
