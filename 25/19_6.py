@@ -1,9 +1,12 @@
 from keras.datasets import mnist
+import os
 from keras.models import Sequential
 from keras.layers import Dense, Activation
 from keras.utils.vis_utils import plot_model
 from keras.utils.np_utils import to_categorical
 import matplotlib.pyplot as plt
+# ライブラリの重複を検出しても処理を進めるというもの
+os.environ['KMP_DUPLICATE_LIB_OK']='TRUE'
 
 (X_train, y_train), (X_test, y_test) = mnist.load_data()
 

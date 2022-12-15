@@ -51,3 +51,4 @@ scikit_learn_data/openml/openml.org/api/v1/json/data/qualities/554.gz
 scikit_learn_data/openml/openml.org/data/v1/download/tmpkl1hqy70/52667.gz
 scikit_learn_data/openml/openml.org/data/v1/download/52667.gz
 clf.pkl
+.vscode/settings.json
