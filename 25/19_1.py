@@ -27,7 +27,7 @@ model.add(Activation("softmax"))
 sgd = optimizers.SGD(lr=0.1)
 model.compile(optimizer=sgd, loss="categorical_crossentropy", metrics=["accuracy"])
 
-# epochs数は5を指定します。
+# epochs数は5を指定します
 history = model.fit(X_train, y_train, batch_size=500, epochs=5, verbose=1, validation_data=(X_test, y_test))
 
 # accuracy、val_accuracyのプロットです
