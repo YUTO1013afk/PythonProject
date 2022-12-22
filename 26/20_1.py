@@ -33,8 +33,7 @@ sgd = optimizers.SGD(lr=0.01)
 
 # ハイパーパラメータ：最適化関数（optimizer）
 # ハイパーパラメータ：誤差関数（loss）
-model.compile(optimizer=sgd, loss="categorical_crossentropy",
-              metrics=["accuracy"])
+model.compile(optimizer=sgd, loss="categorical_crossentropy", metrics=["accuracy"])
 
 # ハイパーパラメータ：バッチサイズ（batch_size）
 # ハイパーパラメータ：エポック数（epochs）
