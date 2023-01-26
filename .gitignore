@@ -63,3 +63,5 @@ test.py
 26/26_1.build/__loader.c
 26/26_1.build/module.__main__.c
 26/26_1.build/module.__main__.const
+28/21_7_datamax_result.txt
+param_cifar10.hdf5
