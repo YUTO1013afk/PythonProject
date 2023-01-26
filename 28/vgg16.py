@@ -5,7 +5,7 @@ from keras.applications.vgg16 import decode_predictions
 import numpy as np
 import keras
 
-img_path = 'pineapple.jpg'
+img_path = 'pizza.jpg'
 
 img = keras.utils.load_img(img_path, target_size=(224, 224))
 img = keras.utils.img_to_array(img)
